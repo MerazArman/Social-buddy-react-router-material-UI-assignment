@@ -10,12 +10,13 @@ import {
 } from "react-router-dom";
 import NotFound from './Component/NotFound/NotFound';
 import PostDetails from './Component/PostDetails/PostDetails';
+import Header from './Component/Header/Header';
 
 
 function App() {
   return (
     <div >
-    
+    <Header></Header>
     <Router>
       <Switch>
         <Route path="/home" >

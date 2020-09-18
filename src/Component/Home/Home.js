@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import fakeData from '../../fakeData';
+import Header from '../Header/Header';
 import Post from '../Post/Post';
 
 const Home = () => {
@@ -13,7 +14,7 @@ const Home = () => {
    },[])
     return (
         <div>
-            <h1>    post detail: {post.length}</h1>
+            
             {
                 post.map(postList=> <Post postList={postList} >  </Post>)
             }

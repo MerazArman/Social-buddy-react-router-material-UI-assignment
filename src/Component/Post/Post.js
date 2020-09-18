@@ -14,7 +14,9 @@ const useStyles = makeStyles({
     root: {
       maxWidth: 885,
       maxHeight:500,
-      margin: 'auto'
+      margin: 'auto',
+      marginBottom:30,
+      marginTop:40
     },
     bullet: {
       display: 'inline-block',

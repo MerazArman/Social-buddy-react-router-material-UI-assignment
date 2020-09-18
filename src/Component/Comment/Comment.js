@@ -79,7 +79,7 @@ const Comment = (props) => {
                   {body}
                 </Typography>
                 <Typography variant="body2" color="textSecondary">
-                  ID: 1030114
+                  
                 </Typography>
               </Grid>
               <Grid item>
@@ -89,14 +89,14 @@ const Comment = (props) => {
             <AccountCircle />
           </Grid>
           <Grid item>
-            <TextField id="input-with-icon-grid" label="With a grid" />
+            <TextField id="input-with-icon-grid" label="Reapply Comment" />
           </Grid>
         </Grid>
       </div>
               </Grid>
             </Grid>
             <Grid item>
-              <Typography variant="subtitle1">$19.00</Typography>
+              <Typography variant="subtitle1"></Typography>
             </Grid>
           </Grid>
         </Grid>

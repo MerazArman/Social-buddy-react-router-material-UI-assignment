@@ -65,25 +65,11 @@ const PostDetails = () => {
    },[])
    
 
-   const  first30 = fakeData.slice(0,20);
+   const  first30 = fakeData.slice(0,40);
    const [comment,setComment]= useState(first30);
    console.log(comment)
 
-  //  useEffect(()=>{
-  //      fetch('https://jsonplaceholder.typicode.com/comments')
-  //      .then(res=>  res.json())
-  //      .then(data=> setComment(data))
-  //  },[])
-
-
-  //  const  [commentPic,setCommentPic]  = useState([]);
-  //  useEffect(()=>{
-  //    fetch('https://randomuser.me/api')
-  //    .then(res=>  res.json())
-  //    .then(data=>  {setCommentPic(data.results[0])
-  //     console.log(commentPic)} )
-     
-  //  },[])
+  
 
    const classes = useStyles();
    const [expanded, setExpanded] = React.useState(false);
@@ -96,7 +82,7 @@ const PostDetails = () => {
         <div>
             
             <Card className={classes.root}>
-            <h3>  This  is  postDetails {postId} </h3>
+            
       <CardHeader
         avatar={
           <Avatar aria-label="recipe" className={classes.avatar}>
@@ -138,6 +124,7 @@ const PostDetails = () => {
           <ShareIcon />
         </IconButton>
         <IconButton
+        
           className={clsx(classes.expand, {
             [classes.expandOpen]: expanded,
           })}
@@ -145,7 +132,9 @@ const PostDetails = () => {
           aria-expanded={expanded}
           aria-label="show more"
         >
-          <CommentIcon />
+          <Typography component="p">  {comment.length}  </Typography>
+          <CommentIcon> </CommentIcon>
+          
         </IconButton>
       </CardActions>
       <Collapse in={expanded} timeout="auto" unmountOnExit>
@@ -156,7 +145,7 @@ const PostDetails = () => {
         </CardContent>
       </Collapse>
     </Card>
-    <h2> {comment.length} </h2>
+    
 
   
         </div>
