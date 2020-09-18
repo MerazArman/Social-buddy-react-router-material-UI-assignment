@@ -12,7 +12,9 @@ import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles({
     root: {
-      minWidth: 275,
+      maxWidth: 885,
+      maxHeight:500,
+      margin: 'auto'
     },
     bullet: {
       display: 'inline-block',
@@ -33,9 +35,9 @@ const Post = (props) => {
 
     const classes = useStyles();
     return (
-        <div>
+       
 
-<Card className={classes.root} variant="outlined">
+<Card  className={classes.root } variant="outlined">
       <CardContent>
        
         <Typography variant="h5" component="h2">
@@ -48,14 +50,14 @@ const Post = (props) => {
       </CardContent>
       <CardActions>
         
-         <Button variant="contained" color="primary">Learn More</Button>
-          
+         
+         <Link  to={`/post/${id}`}> <Button variant="contained" color="primary">Learn More</Button> </Link>
        
       </CardActions>
-     
+
     </Card>
-       <Link  to={`/post/${id}`}> show More {id}</Link>
-        </div>
+       
+        
     );
 };
 

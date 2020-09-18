@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
+import fakeData from '../../fakeData';
 import Post from '../Post/Post';
 
 const Home = () => {
+
    const [post,setPost] = useState([]);
 
    useEffect(()=>{
